@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#387cf6">
+  <title>霞浦海上游 · 聚合购票页面设计</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="studio-header">
+    <a class="brand" href="#"><span class="brand-symbol">≈</span><span>霞浦海上游<small>页面设计 / 购票体验</small></span></a>
+    <div class="studio-meta"><span class="prototype-dot"></span>交互原型<span class="divider"></span>方案 A · 聚合购票<button class="reset-button" data-action="reset">重置体验 ↺</button></div>
+  </header>
+  <main class="studio">
+    <section class="intro">
+      <div><div class="eyebrow">从想出发，到选好一张船票</div><h1>把海岛之行，变简单。</h1><p>在同一页看时间、码头、船型与价格，选好班次就能购票。</p></div>
+      <div class="flow"><span>首页快捷查票</span><i>→</i><span>聚合选择班次</span><i>→</i><span class="flow-final">确认并填写乘船人</span></div>
+    </section>
+    <nav class="view-tabs" aria-label="原型页面"><button class="active" data-action="view" data-view="home">01 首页</button><button data-action="view" data-view="tickets">02 船票</button><button data-action="view" data-view="confirm">03 确认</button></nav>
+    <div class="canvas">
+      <section class="view-column active" id="column-home">
+        <div class="column-heading"><span class="step-number">01</span><div><h2>首页 · 想去哪，就从这里出发</h2><p>保留海岛氛围，购票入口直接露出</p></div></div>
+        <div class="device" id="home-device"><div class="device-screen" id="home-screen"></div></div>
+        <div class="design-caption"><span>入口前置</span>首页与底部「船票」进入同一个聚合页，无需先选船型。</div>
+      </section>
+      <section class="view-column" id="column-tickets">
+        <div class="column-heading"><span class="step-number">02</span><div><h2>船票 · 好比较，也好选择</h2><p>所有出发码头与船型，聚合在一页</p></div></div>
+        <div class="device" id="tickets-device"><div class="device-screen" id="tickets-screen"></div></div>
+        <div class="design-caption"><span>选择合并</span>先展示可购班次，码头、日期和船型成为同页筛选。</div>
+      </section>
+      <section class="view-column" id="column-confirm">
+        <div class="column-heading"><span class="step-number">03</span><div><h2>确认 · 往返也不用来回跳</h2><p>选好去程，同层补齐返程与票种</p></div></div>
+        <div class="device" id="confirm-device"><div class="device-screen" id="confirm-screen"></div></div>
+        <div class="design-caption"><span>决策后置</span>根据班次能力展示单程／往返，确认后进入乘船人填写。</div>
+      </section>
+    </div>
+    <footer class="studio-footer"><p><span class="prototype-dot"></span> 可点击体验：首页查票、日期、码头、船型、排序、班次与返程选择。</p><p>班次、价格、余票和售卖权限均为演示数据；未接入下单或支付。</p></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
